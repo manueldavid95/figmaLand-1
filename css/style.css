@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*============================ reseteo de los estilos ============================*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.6;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.6rem;   
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ============================ variables ============================*/
+:root{
+    --primary: #30D7BA;
+    --secondary: #03D6F3;
+    --secondaryTwo: #112D57;
+    --first-text: #000000;
+    --second-text: #5C5C5C;
+    --light-text: #FFFFFF;
+    --light-background: #FFFFFF;
+    --gradiente: 230.95deg, #CB1AE8 -0.37%, #37BDA6 100%;
+}
+
+/* ============================ clases para reutilizar ============================*/
+.contenedor{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+.btn{
+    border: 1px solid var(--light-background);
+    border-radius: 3.9rem;
+}
+.espacio-p{
+    padding: 10rem 0;
+}
+
+/* ============================ estilos de la pagina ============================*/
+.header{
+    padding: 1px;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(var(--gradiente));
+}
+
+/* ============================ nav ============================*/
+.nav{
+    width: 100%;
+    height: 7rem;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 170px;
+    height: 60px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-list{
+    display: none;
+}
+
+.btn-header{
+    padding: 1rem 2rem;
+    color: var(--light-text);
+}
+
+.icon{
+    display: flex;
+    font-size: 3.5rem;
+    color: var(--light-text);
+    cursor: pointer;
+}
+
+/* ============================textos header============================*/
+.textos-header{
+    text-align: center;
+}
+
+.textos-header h1{
+    margin-bottom: 1.7rem;
+    font-size: 4.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: var(--light-text);
+}
+
+.textos-header p{
+    margin-bottom: 5.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.textos-header-botonos{
+    margin-bottom: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.btn-hero{
+    align-self: center;
+    padding: 1.6rem 7rem;
+    color: var(--light-text);
+}
+
+.bg-white{
+    background-color: var(--light-background);
+    color: var(--secondaryTwo);
+}
+
+/* ============================ seccion #1 ============================*/
+.section-text{
+    margin-bottom: 4.5rem;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.grid-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6.4rem;
+}
+
+.grid-item{
+    width: 100%;
+    padding: 3rem;
+    min-width: 288px;
+    max-width: 400px;
+    text-align: center;
+    background-color: var(--light-background);
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+}
+
+.grid-item:nth-child(2){
+    background: linear-gradient(var(--gradiente));
+    color: var(--light-text);
+}
+
+.grid-item:nth-child(2) a {
+    color: var(--light-text);
+}
+
+.grid-item-icon{
+    margin-bottom: 1.2rem;
+}
+
+.grid-item h3{
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.grid-item p{
+    margin-bottom: 2rem;
+}
+
+.grid-item a{
+    color: var(--secondary);
+}
+
+/* ============================ seccion #2 ============================*/
+.section-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2-text{
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.section-2-text h2{
+    font-size: 4.6rem;
+    margin-bottom: 1.7rem;
+}
+
+.section-2-text P{
+    font-weight: bold;
+    margin-bottom: 2.8rem;
+    color: var(--second-text);
+}
+
+.section-2-text-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.btn-section-2{
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+    padding: 1rem 0;
+    align-self: center;
+    background: var(--secondary);
+    color: var(--light-text);
+    border-radius: 2rem ;
+}
+
+.btn-section-2.white{
+    background: var(--light-background);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* seccion para las tarjetas */
+.tarjetas{
+    padding: 3rem 0;
+}
+
+.tarjetas-text{
+    text-align: center;
+}
+
+.tarjetas-text h2{
+    margin-bottom: 1.7rem;
+    font-size: 4.6rem;
+}
+
+.tarjetas-text p{
+    margin-bottom: 6rem;
+}
+
+.tarjetas-grid-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tarjeta{
+    width: 100%;
+    min-width: 288px;
+    max-width: 400px;
+    padding: 2rem;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tarjeta h3{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.tarjeta p{
+    margin-bottom: 3rem;
+}
+
+.tarjeta h4{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    color: var(--primary);
+}
+
+.tarjeta-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tarjeta-boton{
+    margin-top: 3rem;
+    padding: 1.6rem 6rem;
+    background: var(--secondary);
+    color: #FFFFFF;
+    border-radius: 40px;
+}
+
+/* seccion para los contactos */
+.contacto{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contacto-container{
+    width: 100%;
+    min-width: 288px;
+    max-width: 480px;
+}
+
+.contacto h3{
+    font-size: 4.6rem;
+    margin-bottom: 1.7rem;
+}
+
+.contacto p{
+    margin-bottom: 6rem;
+}
+
+.contacto-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto-form input{
+    border: none;
+    outline: none;
+    padding: 16px 48px 16px 48px;
+    border-radius: 6px;
+}
+
+.contacto-form .input-text{
+    border: 1px solid #D0D0D0;
+}
+
+.contacto-form .input-boton{
+    background-color: var(--secondary);
+    color: #FFFFFF;
+}
+
+/* footer */
+footer{
+    padding: 2rem 0;
+    background-color: #112D57;
+    color: #FFFFFF;
+}
+
+footer > .contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.grid-2{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.grid-2 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.figure-footer{
+    margin-bottom: 8rem;
+    align-self: center;
+}
+
+.social ul li{
+    margin-bottom: 2rem;
+}
+
+.social ul li span{
+    margin-right: 2rem;
+}
+
+.iconos{
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+/* ============================ Media query ============================*/
+@media(min-width: 1000px){
+    .espacio-p{
+        padding: 15rem 0;
+    }
+
+    /* ============================ nav ============================*/
+    .nav{
+        margin-bottom: 7rem;
+    }
+
+    .nav-list{
+        display: flex;
+        gap: 4rem;
+    }
+
+    .btn-header{
+        padding: 1rem 3.6rem;
+        color: var(--light-text);
+    }
+
+    .nav-list li a{
+        font-weight: 400;
+        font-size: 1.5rem;
+        font-style: normal;
+        color: var(--light-text);
+    }
+
+    .icon{
+        display: none;
+    }
+
+    /* ============================textos header ============================*/
+    .textos-header{
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .textos-header h1{
+        font-size: 5.5rem;
+        font-weight: 900;
+        line-height: 66px;
+    }
+
+    .textos-header-botonos{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn-hero{
+        align-self: initial;
+    }
+
+    /* ============================ seccion #1 ============================*/
+    .section-text{
+        font-size: 4.6rem;
+        font-weight: none;
+        color: var(--first-text);
+    }
+
+    .grid-3{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .grid-item{
+        padding: 4rem;
+        text-align: left;
+    }
+
+    .grid-item h3{
+        font-size: 2.5rem;
+    }
+
+    .grid-item-icon{
+        width: 62px;
+        height: 62px;
+    }
+
+    /* ============================ seccion #2 ============================*/
+    .section-2{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .section-2.reverse{
+        flex-direction: row-reverse;
+    }
+
+    .section-2-text{
+        width: 40%;
+        text-align: left;
+    }
+
+    .section-2-text h2{
+        margin-bottom: 1.7rem;
+        font-weight: 500;
+    }
+
+    .section-2-text p{
+        margin-bottom: 3.6rem;
+    }
+
+    .section-2-picture{
+        width: 40%;
+    }
+
+    .section-2-text-buttons{
+        flex-direction: row;
+    }
+
+    .btn-section-2{
+        align-self: flex-start;
+    }
+
+    /* estilos para la seccion 4 */
+    .section-2-text.small{
+        width: 30%;
+    }
+
+    .section-2-picture.grande{
+        width: 70%;
+    }
+
+    .section-2-picture.grande img{
+        width: 100%;
+    }
+
+    /* seccion para las tarjetas */
+    .tarjetas-grid-3{
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    /* seccion para los contactos */
+    .contacto{
+        padding: 13rem 0;
+    }
+
+    .contacto-form{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .contacto-form .input-text{
+        flex-grow: 1;
+    }
+
+    /* footer */
+    footer{
+        padding: 6rem 0;
+    }
+
+    footer > .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .figure-footer{
+        margin: 0;
+    }
+
+    .grid-2{
+        margin: 0;
+    }
+}
